@@ -1,0 +1,58 @@
+.mainbox {
+	padding: 32px 16px;
+}
+
+.mainbox h2 {
+	color: #4eabb7;
+	line-height: 40px;
+}
+
+.mainbox span {
+	display: block;
+	text-indent: 2em;
+	font-size: 14px;
+	line-height: 32px;
+}
+
+.mainbox .tag {
+	position: relative;
+	display: inline-block;
+	font-size: 18px;
+	text-indent: 0;
+	padding-right: 16px;
+}
+
+.shareTitle {
+	margin-top: 40px;
+}
+
+.shareTitle input {
+	height: 28px;
+	width: 520px;
+	padding: 0 8px;
+}
+
+.shareCategory, .shareContent {
+	margin-top: 16px;
+}
+
+.shareCategory select {
+	height: 32px;
+	width: 200px;
+}
+
+.shareContent textarea {
+	resize: none;
+	padding: 8px;
+}
+
+.mainbox input[type="submit"] {
+	float: right;
+	margin-top: 8px;
+	margin-right: 20px;
+	width: 104px;
+	height: 32px;
+	color: white;
+	background-color: #4eabb7;
+	cursor: pointer;
+}

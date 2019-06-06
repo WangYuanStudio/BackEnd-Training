@@ -1,0 +1,31 @@
+ul{
+	padding-top: 24px;
+}
+ul li{
+	font-size: 18px;
+	text-align: left;
+	padding-bottom: 16px;
+}
+ul li .title{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+}
+ul li label{
+	color: #1296db;
+}
+ul li .see{
+	float: left;
+	padding-left: 16px;
+	cursor: pointer;
+}
+ul li .out{
+	float: right;
+	padding-right: 16px;
+	cursor: pointer;
+}
+
+ul li .out a{
+	color: #d81e06;
+}

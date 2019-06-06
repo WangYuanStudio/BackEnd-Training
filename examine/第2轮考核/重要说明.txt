@@ -1,0 +1,12 @@
+【改控件说明】
+1、将需要后端控制的HTML表单改成ASP.NET控件；
+2、保持原来的控件ID，“id”要改成“ID”；
+3、ASP.NET控件的“class”改成“CssClass”，不是ASP.NET控件的“class”不用改；
+4、超链接的href属性，将“.html”改成“.aspx”；
+5、其余前端的属性和样式保持原样，可以微改，但应总体保持原来的布局和风格。
+
+
+【模板文件改动说明】
+1、更新了sign.js文件。
+2、添加了zepto.min.js文件。
+3、sign.html文件文档后面多加了一行引入zepto.min.js文件的代码。

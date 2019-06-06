@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>后台管理页面</title>
+	<link rel="stylesheet" href="./css/normal.css" />
+	<link rel="stylesheet" href="./css/bgm.css" />
+</head>
+<body>
+	<div class="containerContainer">
+		<div class="container">
+			<div class="topImage">
+				<img src="./image/bgm.png" />
+			</div>
+			<h3>后台管理页面</h3>
+		</div>
+		<div class="container">
+			<div class="sonImg">
+				<span class="title">发布新公告</span>
+			</div>
+			<form>
+				<p>
+					<span class="title">新公告标题：</span>
+					<input type="text" id="notice_title" name="noticeTitle" placeholder="请输入公告的标题" />
+				</p>
+				<div class="noticeContent">
+					<div class="title">新公告内容：</div>
+					<textarea id="notice_content" name="noticeContent" placeholder="请输入公告的内容"></textarea>
+					<div class="clear"></div>
+				</div>
+				<input type="submit" id="notice_submit" value="点击发布"/>
+			</form>
+		</div>
+		<div class="container">
+			<div class="sonImg Management">
+				<span class="title">管理已发布公告</span>
+			</div>
+			<ul>
+				<li class="Mtitle">
+					<div class="MF noticeTitleM">公告ID</div>
+					<div class="MF noticeContent">公告标题</div>
+					<div class="MF sendTime">发布时间</div>
+					<div class="MF method">操作</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">001</div>
+					<div class="MF noticeContent">这是一个公告标题</div>
+					<div class="MF sendTime">2017-11-25-12:00</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">002</div>
+					<div class="MF noticeContent">这是一个公告标题</div>
+					<div class="MF sendTime">2017-11-25-12:00</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">003</div>
+					<div class="MF noticeContent">这是一个公告标题</div>
+					<div class="MF sendTime">2017-11-25-12:00</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">004</div>
+					<div class="MF noticeContent">这是一个公告标题</div>
+					<div class="MF sendTime">2017-11-25-12:00</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+			</ul>
+			<div class="page">
+				<div class="infoPage">
+					<label>当前页：1 | 总页数：3</label>
+				</div>
+				<div class="sonPage">
+					<a href="#">首页</a>
+				</div>
+				<div class="sonPage">					
+					<a href="#">上一页</a>
+				</div>
+				<div class="sonPage">
+					<a href="#">下一页</a>
+				</div>
+				<div class="sonPage">
+					<a href="#">末页</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="sonImg ManagementUsr">
+				<span class="title">管理用户</span>
+			</div>
+			<ul>
+				<li class="Mtitle">
+					<div class="MF noticeTitleM">用户ID</div>
+					<div class="MF noticeContent">用户名</div>
+					<div class="MF sendTime">用户密码</div>
+					<div class="MF method">操作</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">01</div>
+					<div class="MF noticeContent">这是一个用户名</div>
+					<div class="MF sendTime">zheshiyigemima1</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">02</div>
+					<div class="MF noticeContent">这是一个用户名</div>
+					<div class="MF sendTime">zheshiyigemima1</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">03</div>
+					<div class="MF noticeContent">这是一个用户名</div>
+					<div class="MF sendTime">zheshiyigemima1</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+				<li>
+					<div class="MF noticeTitleM">04</div>
+					<div class="MF noticeContent">这是一个用户名</div>
+					<div class="MF sendTime">zheshiyigemima1</div>
+					<div class="MF method delate">
+						<input type="button" value="删除" onclick="return confirm('确定要删除吗？')" />
+					</div>
+					<div class="clear"></div>
+				</li>
+			</ul>
+			<div class="page">
+				<div class="infoPage">
+					<label>当前页：1 | 总页数：3</label>
+				</div>
+				<div class="sonPage">
+					<a href="#">首页</a>
+				</div>
+				<div class="sonPage">					
+					<a href="#">上一页</a>
+				</div>
+				<div class="sonPage">
+					<a href="#">下一页</a>
+				</div>
+				<div class="sonPage">
+					<a href="#">末页</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

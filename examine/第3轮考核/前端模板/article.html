@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>CMS新闻发布平台</title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/article.css"/>
+    <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="js/wordsCount.js"></script>
+</head>
+<body>
+    <form method="post" action="#" id="form1">
+        <!-- 标题栏 -->
+        <div id="banner">
+            <div id="banMid">
+                <h1>&nbsp;CMS新闻发布平台</h1>
+                <span>脱离了设计的网页将就啦！</span>
+            </div>
+        </div>
+
+        <!-- 导航栏 -->
+        <div id="mainNav">
+            <ul id="navMid">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html">分类</a></li>
+                <li><a href="share.html">发布</a></li>
+                <li><a href="idea.html">想法</a></li>
+                <li><a href="user.html">我</a></li>
+            </ul>
+        </div>
+
+        <!-- 内容栏 -->
+        <div id="container">
+
+            <!-- 主体 -->
+            <div id="main">
+                <!-- 左边栏 -->
+                <div id="mainLeft">
+                    <!-- 搜索栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">搜索</span>
+                        <div class="clear"></div>
+                        <input id="searchInput" name="content" placeholder="关键字：标题/发布人" />
+                        <input id="submitBtn" type="submit" class="pointer" value="搜索" />
+                    </div>
+
+                    <!-- 分类栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">分类</span>
+                        <div class="clear"></div>
+                        <ul>
+                            <li><a href="list.html?categoryId=1">所有分类</a></li>
+                            <li><a href="list.html?categoryId=2">Web前端</a></li>
+                            <li><a href="list.html?categoryId=3">Web后端</a></li>
+                            <li><a href="list.html?categoryId=4">服务器运维</a></li>
+                            <li><a href="list.html?categoryId=5">微信公众平台</a></li>
+                            <li><a href="list.html?categoryId=6">嵌入式Linux</a></li>
+                            <li><a href="list.html?categoryId=7">极客空间</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 推荐栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">推荐</span>
+                        <div class="clear"></div>
+                        <ul>
+                            <li><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">清华大学开源镜像站</a></li>
+                            <li><a href="https://www.ithome.com/" target="_blank">iT之家</a></li>
+                            <li><a href="http://www.csdn.net/" target="_blank">CSDN</a></li>
+                            <li><a href="http://forum.ubuntu.org.cn/" target="_blank">Ubuntu社区</a></li>
+                            <li><a href="https://www.imooc.com/" target="_blank">程序员的梦工厂</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右边栏 -->
+                <div id="mainRight">
+                    <div id="show">
+                        <span class="blockTitle2" id="position">位置 &gt;&gt;
+                            <b><a href="list.html">分类新闻</a></b> &gt;&gt;
+                            <b><a href="list.html?categoryId=7">极客空间</a></b>
+                        </span>
+                        <div class="clear"></div>
+
+                        <div class="mainbox">
+                            <!-- 新闻属性 -->
+                            <div id="TitleBox" class="PassHeader">
+                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                <span id="PassInfo">
+                                    <b>发布人：</b><a href="user.html?userId=1">yowfung</a>
+                                    <b>发布时间：</b>2017-02-21 14:58
+                                    <b>阅读量：</b>25
+                                    <b>评论数：</b>5
+                                </span>
+                            </div>
+                            <!-- 新闻正文 -->
+                            <div id="ContentBox" class="PassContent">
+<!-- 新闻正文开始，这个例子使用的是富文本, 你不一定要使用富文本 -->
+<style type="text/css">
+#ContentBox p {text-indent: 2em;}
+#ContentBox span {display: block;}
+#ContentBox img {width: 100%;}
+#ContentBox b {font-size: 16px; color: blue}
+#ContentBox code {font-style: italic;color: #c40; font-weight: normal; background-color: rgba(0,0,0,0.1); line-height: 24px; padding: 4px; margin-bottom: 20px; display: block;}
+</style>
+<code>本文摘抄自“嵌入式Linux中文站”；本示例文章为富文本文章，你不一定要使用富文本！</code>
+<img src="img/articleExample.jpg">
+<p>很多像这样的日子，当地上积起厚厚的雪时，我通常会燃起铁炉，把马蹄跌烧的通红，搓搓温暖的手，开始打造特制手工马蹄铁。</p>
+<p>经过了5年多的专职钉马掌生活后，我开始问自己一个问题：我要一直这样干下去吗？能不能干点儿别的？我的性格跟其他乡下那些叼着雪茄、喝着小酒的铁匠不一样，我从来没有戴过牛仔帽或骑过公牛。我渴望的是知道更多的事情，琢磨更多的事情，做更多的事情。</p>
+<p>成功的从事开发工作7个月后，我已经给几百人回复了邮件，他们问我如何成为一个程序员的，寻求我的建议，他们想知道如何判断自己是否适合去做一名程序员。</p>
+<p>下面罗列了7种特征，是我从同事中最有效的程序员身上观察到的，我知道，优秀的程序员都有很多共同之处：</p>
+<br>
+<b>1) 注意细节，尤其是最小的细节。</b>
+<p>“差不多”、“很接近”是只能在做马蹄铁时用的词，在软件开发中，95%的正确仍然是不能用，一个“差不多”能用方法或一个使图片很“接近”居中的CSS样式都是不合格、不能用的。这剩下的5%对于整个软件的有效性十分重要，能造成完全相反的结果。</p>
+<span>«««  如果你讨厌细节，你就别去做程序员。</span>
+<br>
+<b>2)  学无止境</b>
+<p>起初这句话听起来会很迷人，你会很喜欢！我喜欢学习新事物！尤其是当你来自于一个无聊的工作或像钉马掌这样永远不变的事情时 =-)。然而，经过了一段时间后，你会发现，这变成了一条永不停息的知识河流，如果你不喜欢水，你会感觉困在了无尽无边的知识瀑布前，无法停止，也无法穷尽。我每天大概有学到10-20种新的东西，我喜欢这些！我的弟弟却希望事情永远不会变化，始终如一，他对我说他永远都不愿意去学编程。</p>
+<span>«««  如果你不喜欢坚持不懈的去学习新事物，而喜欢待在一个永不变化的环境中，那你很可能成为不了一名程序员。</span>
+<br>
+<b>3)  面对压力、紧张和限定期限</b>
+<p>没错，每个人都喜欢使用软件，但你喜欢面对任务的最后期限和最终目标吗？需要什么时候完成？做完这些要花多少时间？我们能在这段时间里完成更多的任务吗？是否还记得要注意细节？你怎么办？急匆匆的完成？加班加点希望能多完成一些？在理想世界里，编程是一个很有趣的活动，我们写出代码，让它们完成很酷的事情，吃着批萨，喝着可乐。而在现实生活中，有的是压力，虽然不是时刻都这样，但事情会比那种做一个30分钟的简单在线辅导要不同的多。我喜欢挑战我的极限，我渴望成长，变成一个更棒的程序员，所以我不介意。</p>
+<span>««« 你面对时间限制和工作压力会怎样？如果你想回避这些压力，那你将无法成为一名程序员。</span>
+<br>
+<b>4)  有组织能力</b>
+<p>我知道有些程序员的生活一塌糊涂，看起来他们似乎没自我组织能力，但我说的不是这些，我是说管理好工作流程的能力。比如，能否迅速容易的在你的计算机里找到一个东西？我认识的优秀的程序员通常能迅速的定位一个需要的文件，能够用工具或脚本帮他们处理繁杂的事物，这些都是高效的工作。</p>
+<span>««« 当你学到了一个新东西时，你是否把它写下来？你是否喜欢想出办法来替你完成那些重复的工作？你能很好的安排各种不同的任务吗？如果不能，那你就不适合去当一名程序员。</span>
+<br>
+<b>5) 好奇心</b>
+<p>当我还是十几岁时，教堂里的一位夫人几乎每月都会对我说一次，她说我应该停止问那么多为什么，她说这让人讨厌。虽然受了批评，最终我还是清楚的认识到，优秀的程序员总是在问“为什么？”这个应用的工作原理是什么？那个横跨街道的建筑是怎么建起来的？程序员之间的对话听起来总是像这样开始的：“很奇怪他们为什么要这样做…？”以前我以为问这么多为什么是很奇怪的表现，但现在我明白，至少是在软件开发中，这是一个好的品质。</p>
+<span>««« 不明白的事情会引起你的好奇心吗？新事物会让你兴奋的想搞清楚它的原理吗？如果你不具有某种程度天生的好奇心，那么你就很可能不喜欢做一名程序员。</span>
+<br>
+<b>6) 自学</b>
+<p>我知道，很多的程序员都上过大学，出自高校的，但这不是我要说的。优秀的程序员总是在钻研程序代码和文档，来弄清楚东西的工作原理，他们不会敲开老板办公室的们说：“我需要上培训课，学习这款新软件”。优秀的程序员在不断的学习，不断的靠自己研究出事情的原委——不论是有高学历还是没有学历。</p>
+<span>««« 如果你需要有人教你，或者等着参加热门的课程去学知识，那你很可能不会成为一名程序员。</span>
+<br>
+<b>7) 人际交往能力</b>
+<p>这在程序员中不是一个普遍的特征。真正优秀的程序员善于与人交往，但大多数程序员缺乏这些能力。如果你善于沟通，你的老板、你的公司会非常喜欢你。而且，不要因为他们不会编码就瞧不起他们。</p>
+<!-- 新闻正文结束 -->
+                            </div>
+
+                            <!-- 控制区, 只有自己的新闻才可以删除和编辑 -->
+                            <div class="Control">
+                                <input type="button" value="收藏">
+                                <input type="button" value="删除">
+                                <input type="button" value="编辑">
+                            </div>
+
+                            <!-- 评论区 -->
+                            <div class="PassComment">
+                                <!-- 发表评论 -->
+                                <div id="SendComment">
+                                    <textarea rows="2" cols="20" id="SendContent" placeholder="在这里写下你对这则新闻的看法"></textarea>
+                                    <span id="WordsCountBox">
+                                        <b>字数: </b>
+                                        <span id="WordsCount">0</span>/200
+                                    </span>
+                                    <input type="submit" id="Send" value="发表评论" onclick="return ExistContent();">
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <!-- 其他人的评论 -->
+                                <h3>评论区(<label>5<label>)</h3>
+                                <ul id="ViewComment">
+                                    <li>
+                                        <a href="user.html?userId=2">HenXu1225</a>:
+                                        <span>1小时前</span>
+                                        <div>
+                                            写得真是太好了, 虽然我只看了一眼~~~略~~~~
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="user.html?userId=2">HenXu1225</a>:
+                                        <span>1小时前</span>
+                                        <div>
+                                            写得真是太好了, 虽然我只看了一眼~~~略~~~~
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="user.html?userId=2">HenXu1225</a>:
+                                        <span>1小时前</span>
+                                        <div>
+                                            写得真是太好了, 虽然我只看了一眼~~~略~~~~
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="user.html?userId=2">HenXu1225</a>:
+                                        <span>1小时前</span>
+                                        <div>
+                                            写得真是太好了, 虽然我只看了一眼~~~略~~~~
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="user.html?userId=2">HenXu1225</a>:
+                                        <span>1小时前</span>
+                                        <div>
+                                            写得真是太好了, 虽然我只看了一眼~~~略~~~~
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- 评论分页栏 -->
+                                <div id="turn">
+                                    <a href='javascript:#'>&lt;</a>
+                                    <a href='javascript:#'>1</a>
+                                    <a href='article.html?newId=1&page=2#ViewComment'>2</a>
+                                    <a href='article.html?newId=1&page=3#ViewComment'>3</a>
+                                    <a href='article.html?newId=1&page=4#ViewComment'>4</a>
+                                    <a href='article.html?newId=1&page=5#ViewComment'>5</a>
+                                    <a href='article.html?newId=1&page=6#ViewComment'>6</a>
+                                    <a href='article.html?newId=1&page=7#ViewComment'>7</a>
+                                    <a href='article.html?newId=1&page=8#ViewComment'>8</a>
+                                    <a href='article.html?newId=1&page=9#ViewComment'>9</a>
+                                    <a href='article.html?newId=1&page=2'>&gt;</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 页脚栏 -->
+        <div id="footer">
+            <div id="footerMid">
+                <div>
+                    <h2>友情链接</h2>
+                    <span>
+                        <a href="http://www.laijingwu.com" target="_blank">laijingwu</a>
+                        <a href="http://www.huizhe.xyz" target="_blank">Huizhe</a>
+                        <a href="http://yuanmoc.com/" target="_blank">yuanmoc</a>
+                        <a href="http://www.henxu1225.com/" target="_blank">HenryXu</a>
+                        <a href="http://www.yowfung.cn/" target="_blank">YowFung</a>
+                    </span>
+                    <span>&copy; Copyright WangYuanInfoStudio 2017-2018</span>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

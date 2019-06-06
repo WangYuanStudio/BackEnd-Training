@@ -1,0 +1,142 @@
+.mainbox {
+	padding: 0 20px 0 0;
+}
+
+.mainbox div {
+	padding: 0 16px;
+	width: 100%;
+	height: 630px;
+	overflow: hidden;
+}
+
+
+.mainbox h2 {
+	margin: 20px;
+	color: #4eabb7;
+	text-align: center;
+	margin-bottom: 28px;
+}
+
+.mainbox span {
+	width: 240px;
+	height: 40px;
+	text-align: right;
+	padding-right: 16px;
+	display: inline-block;
+}
+
+.mainbox .tips {
+	margin-left: 260px;
+	font-size: 13px;
+}
+
+.mainbox input[type="text"], .mainbox input[type="password"] {
+	height: 24px;
+	width: 200px;
+}
+
+.mainbox input[type="checkbox"] {
+	margin-left: 260px;
+}
+
+.mainbox input[type="submit"] {
+	margin-top: 32px;
+	margin-left: 260px;
+	width: 200px;
+	height: 32px;
+	background-color: #4eabb7;
+	color: white;
+	cursor: pointer;
+}
+
+.mainbox label {
+	margin-right: 8px;
+}
+
+.mainbox a {
+	color: #4eabb7;
+}
+
+.mainbox a:hover {
+	text-decoration: underline;
+}
+
+.user_login h2{
+	margin-top: 200px;
+}
+
+.user_register h2 {
+	margin-top: 64px;
+}
+
+.user_changeInfo h2 {
+	margin-top: 104px;
+}
+
+.user_changePassword h2 {
+	margin-top: 160px;
+}
+
+.user_showInfo h2 {
+	margin-top: 144px;
+	padding: 0;
+}
+
+.user_showInfo .show_control {
+	text-align: center;
+	padding: 0;
+	height: 32px;
+	margin-top: 32px;
+}
+
+.user_showInfo .show_control a {
+	padding: 0 8px;
+}
+
+.user_showNews h2 {
+	margin-top: 40px;
+}
+
+.user_showNews ul {
+	height: 440px;
+}
+
+.user_showNews ul li {
+	cursor: pointer;
+}
+
+.user_showNews ul li:hover {
+	background-color: #f0f0f0;
+}
+
+.user_showNews ul li .title {
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 8px;
+	display: inline-block;
+	text-decoration: none;
+	color: #686868;
+}
+
+.user_showNews ul li span {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+}
+
+#turn {
+	padding: 0;
+	text-align: left;
+}
+
+#turn a {
+	text-decoration: none;
+}
+
+#turn .back {
+	margin-right: 64px;
+	margin-left: 16px;
+	padding: 4px 16px;
+}

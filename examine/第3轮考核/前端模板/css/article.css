@@ -1,0 +1,168 @@
+.Control {
+    padding: 4px 24px;
+    border-top: 1px dashed #CCC;
+    border-bottom: 1px dashed #CCC;
+    font-size: 13px;
+    background-color: #FAFAFA;
+    width: 604px;
+}
+
+.Control input{
+    border: none;
+    color: #4eabb7;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: #FAFAFA;
+    cursor: pointer;
+    outline: none;
+}
+
+.Control input:hover {
+    text-decoration: underline;
+}
+
+#PassInfo b {
+    color: #CCC;
+    margin-left: 16px;
+}
+
+.blockTitle2 a {
+    color: #4eabb7;
+    text-decoration: none;
+}
+
+.PassHeader {
+    padding: 24px 24px;
+}
+
+.PassHeader h3 {
+    line-height: 24px;
+    color: #000;
+    text-align: center;
+}
+
+#PassInfo {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px dashed #AAA;
+    color: #62858a;
+}
+
+#PassInfo a {
+    color: #4eabb7;
+}
+
+#PassInfo a:hover {
+    text-decoration: underline;
+}
+
+.PassContent {
+    position: relative;
+    padding: 8px 24px 32px 24px;
+    min-height: 500px;
+    color: #444;
+    font-size: 14px;
+}
+
+.PassContent p {
+    padding: 8px 0;
+}
+
+.PassComment {
+    padding: 24px 24px;
+    min-height: 240px;
+}
+
+#SendComment {
+    padding-bottom: 24px;
+    height: 176px;
+}
+
+#WordsCountBox {
+    font-size: 12px;
+    color: #888;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    display: inline;
+}
+
+#WordsCount {
+    color: rgb(68, 68, 68);
+    display: inline;
+}
+
+#SendComment b {
+    font-size: 12px;
+    color: #BBB;
+}
+
+#SendContent {
+    width: 593px;
+    height: 88px;
+    resize: none;
+    padding: 4px 4px;
+    color: #666;
+}
+
+#Send {
+    padding: 4px 16px;
+    float: right;
+    background-color: #4eabb7;
+    color: #FFF;
+    height: 32px;
+    width: 96px;
+    cursor: pointer;
+}
+
+#mainRight #show ul {
+    margin: 0;
+}
+
+.PassComment h3 {
+    color: #4eabb7;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+#ViewComment {
+    width: 100%;
+    padding-bottom: 32px;
+    border-bottom: 1px dashed #ccc;
+}
+
+#ViewComment li {
+    font-size: 14px;
+    padding: 8px 0;
+    margin-top: 16px;
+}
+
+#ViewComment li a {
+    color: #4eabb7;
+}
+
+#ViewComment li a:hover {
+    text-decoration: underline;
+}
+
+#ViewComment li span{
+    font-size: 12px;
+    margin-left: 8px;
+    display: inline-block;
+    color: #d3d3d3;
+}
+
+#ViewComment li div{
+    padding: 4px 0; 
+    text-indent: 2em;
+} 
+
+#turn {
+    margin-top: 8px;
+    margin-left: -24px;
+}

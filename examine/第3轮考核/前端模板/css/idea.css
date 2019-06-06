@@ -1,0 +1,24 @@
+.mainbox {
+	/*padding-bottom: 40px;*/
+}
+
+.mainbox h2 {
+    color: #4eabb7;
+    margin-top: 32px;
+    margin-left: 20px;
+}
+
+.mainbox div {
+	padding: 8px 20px;
+	margin-bottom: 40px;
+}
+
+.mainbox p {
+	text-indent: 2em;
+}
+
+.mainbox img {
+	width: 100%;
+	margin-top: 16px;
+	cursor: pointer;
+}

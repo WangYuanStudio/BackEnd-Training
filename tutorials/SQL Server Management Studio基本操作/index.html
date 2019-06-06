@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>SQL Server Management Studio基本操作</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --code-block-bg-color: inherit; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; contain: layout paint; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+.typora-export #write { margin: 0px auto; }
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.typora-export p { white-space: normal; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: var(--code-block-bg-color); position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print {
+  html, body { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 1200px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(221, 221, 221); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(221, 221, 221); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) {
+}
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+
+
+
+
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h1><a name='header-n0' class='md-header-anchor '></a>SQL Server Management Studio基本操作</h1><p>网园资讯工作室  编程部  2017/11/05</p><hr /><h3><a name='header-n5' class='md-header-anchor '></a>SQL Server Management Studio 简介</h3><p>	百度百科解释：SQL Server Management Studio 是一个集成环境，用于访问、配置、管理和开发 SQL Server 的所有组件。SQL Server Management Studio 组合了大量图形工具和丰富的脚本编辑器，使各种技术水平的开发人员和管理员都能访问 SQL Server。</p><p>	网园师兄解释：就是用来管理和操作SQL Server数据库的一个软件。</p><p>      <br/></p><h3><a name='header-n10' class='md-header-anchor '></a>连接数据库</h3><ol start='' ><li><p>打开SQL Server Management Studio。</p><p><img src='./img/TIM1.png' alt='img' /></p><p>    <br/></p></li><li><p>连接本地数据库。服务器类型选择<code>数据库引擎</code>；服务器名称默认为你电脑的计算机名，不需要更改，如果已经更改并且不知道计算机名是什么，可以填<code>localhost</code>；身份验证选择<code>Windows身份验证</code>。</p><p><img src='./img/TIM2.png' alt='img' /></p><p>  <br/></p></li><li><p>如果连接失败，原因可能是因为没有开启SQL Server系统服务，这时候可以在<code>开始菜单</code>→<code>所有程序</code>里找到<code>SQL Server配置管理器</code>，然后左边点击<code>SQL Server服务</code>，右边右击<code>SQL Server(MSSQLSERVER)</code>，点击<code>启动</code>，然后再重新尝试一次连接数据库即可。</p><p><img src='./img/TIM2_1.png' alt='img' /></p><p>  <br/></p></li><li><p>连接成功后，可在<code>对象资源管理器</code>里看到本地服务器。</p><p><img src='./img/TIM2_2.png' alt='img' /></p><p>     <br/></p></li></ol><h3><a name='header-n16' class='md-header-anchor '></a>创建数据库</h3><ol><li><p>在对象资源管理器中右击<code>数据库</code>，点击<code>新建数据库</code>。</p><p><img src='./img/TIM3.png' alt='img' /></p><p>  <br/></p></li><li><p>在弹出的新建数据库窗口中，输入<code>数据库名称</code>，名称必须是英文，最好跟网站名称相同；然后将下面的滚动条拖到最右边，在<code>路径</code>那一列选择数据库存放的位置，为了方便交作业，请将路径设置为你的网站路径，注意两个路径要一致。</p><p><img src='./img/TIM4.png' alt='img' /></p><p>  <br/></p></li><li><p>创建成功后，可在<code>对象资源管理器</code>中看到你创建的这个数据库。</p><p><img src='./img/TIM5.png' alt='img' /></p><p>    <br/></p></li></ol><h3><a name='header-n19' class='md-header-anchor '></a>创建数据表</h3><p>	<code>数据库</code>跟<code>数据表</code>的区别：一个数据库中可有多个数据表。例如，一个美食网站就用一个数据库，这个数据库中有一个数据表是存放用户信息的、有一个表是存放菜品信息的、有一个表是存放用户订单信息的、有一个表是存放餐馆财账信息的……</p><ol><li><p>展开数据库左边的<code>+</code>号。</p><p><img src='./img/TIM6.png' alt='img' /></p><p>  <br/></p></li><li><p>选中<code>表</code>，右击，选择<code>新建</code>→<code>表</code>。</p><p><img src='./img/TIM7.png' alt='img' /></p><p>  <br/></p></li><li><p>此时会出现一个数据表的结构设计界面，根据你网站的实际情况以及你的构思来设计数据表。任何数据表都必须要有“id（下图中的uid）”这一列名，id是用于区分每一条数据的唯一标识。注意数据类型和是否允许NULL值。下图仅供参考。</p><p><img src='./img/TIM8.png' alt='img' /></p><p>  <br/></p></li><li><p>数据表设计好后，选中“id”，点右键，<code>设置主键</code>，主键是用来唯一标识这一条数据记录的。</p><p><img src='./img/TIM9.png' alt='img' /></p><p>  <br/></p></li><li><p>设置主键后，可以在“id”左侧看到一个钥匙的图标，表示这一列名是主键。设置主键后，我们还需要让“id”在记录数据时自增，这样才不会出现“id”重复的现象。在下面的<code>列属性</code>栏展开<code>标识规范</code>，将<code>(是标识)</code>设置为<code>是</code>。</p><p><img src='./img/TIM10.png' alt='img' /></p><p>  <br/></p></li><li><p>完成数据表设计、主键设置、标识规范设置后，点击左上角的<code>保存</code>图标，或按下键盘<code>Ctrl+S</code>将数据表保存。</p><p><img src='./img/TIM11.png' alt='img' /></p><p>    <br/></p></li><li><p>此时会弹出一个对话框让你输入表的名称，根据实际情况输入即可。表名应尽可能有意义。</p><p><img src='./img/TIM12.png' alt='img' /></p><p>  <br/></p></li><li><p>点击<code>确定</code>后可以看到左侧<code>对象资源管理器</code>中已经出现了刚刚新建的表，如果没有出现，可以点击上面的<code>刷新</code>按钮。</p><p><img src='./img/TIM13.png' alt='img' /></p><p>   <br/></p></li></ol><h3><a name='header-n273' class='md-header-anchor '></a>表的设计及数据管理</h3><ul><li><p>如果想对一个已经设计好的数据表进行重新设计（修改结构），可以在<code>对象资源管理器</code>中右击欲修改的那个数据表，选择<code>设计</code>。<br/></p><p><img src='./img/TIM16.png' alt='img' /></p><p>  <br/></p><p><img src='./img/TIM17.png' alt='img' /></p><p>  <br/></p></li><li><p>如果想查看该数据表里的数据内容，或者要手动修改数据表里的数据，可以在<code>对象资源管理器</code>中右击欲查看或编辑的数据表，选择<code>编辑前200行</code>。</p><p><img src='./img/TIM14.png' alt='img' /></p><p>  <br/></p><p><img src='./img/TIM15.png' alt='img' /></p><p>  <br/></p></li></ul><h3><a name='header-n22' class='md-header-anchor '></a>数据库的分离和附加</h3><ul><li><p>为什么要对数据库进行分离和附加？</p><blockquote><p style="text-indent: 2em;">	SQL Server 的数据库文件是以<code>.mdf</code>为扩展名的文件，当我们连接数据库并创建数据库后，这个文件是一直加载在数据库服务器里（即使关闭了SQL Server Management Studio）。因此要想删除mdf文件，或移动mdf文件，就必须将该文件从数据库服务器里切断，即分离。只有分离之后的独立的mdf文件，才能进行转移。从其他地方拷贝过来的mdf文件，当你想在数据库服务器里加载它时，就必须要将mdf文件附加进数据库服务器里来。</p><p style="text-indent: 2em;">	由于我们的培训作业需要查看你们的数据库设计和结构，同时也是为了能够正常运行你们做的网站，因此你们在提交作业之前必须要将数据库分离出来，然后将mdf文件同网站一起打包后再提交作业，提交完作业后你们需要重新将mdf文件附加进你们的数据库管理器里然后继续开发你们的网站。</p></blockquote></li><li><p>数据库的分离。</p><ol><li>在<code>对象资源管理器</code>中选中你的数据库，右击，选择<code>任务</code>→<code>分离</code>。</li></ol><p><img src='./img/TIM18.png' alt='img' /></p><p>  <br/></p><ol start='2' ><li>在弹出的窗口中点击<code>确定</code>即可。</li></ol><p><img src='./img/TIM19.png' alt='img' /></p><p>  <br/></p><ol start='3' ><li>分离成功后，打开你数据库文件的存放位置，将<code>mdf</code>文件和<code>ldf</code>文件一起打包提交作业即可。</li></ol><p><img src='./img/TIM20.png' alt='img' /></p><p>  <br/></p></li><li><p>数据库的附加</p><ol><li>在附加之前先修改mdf文件和ldf文件的安全属性，否则可能会附加失败。选中mdf文件（ldf文件同理），右击，选择<code>属性</code>。</li></ol><p><img src='./img/TIM21.png' alt='img' /></p><p>  <br/></p><ol start='2' ><li>在弹出的属性窗口中点击<code>安全</code>，然后选择你当前登录的系统用户，点击<code>编辑</code>。</li></ol><p><img src='./img/TIM22.png' alt='img' /></p><p>  <br/></p><ol start='3' ><li>将权限全部勾选<code>允许</code>，然后点<code>确定</code>关闭窗口。</li></ol><p><img src='./img/TIM23.png' alt='img' /></p><p>  <br/></p><ol start='4' ><li>接着回到数据库管理系统，在<code>对象资源管理器</code>中选中<code>数据库</code>，右击，选择<code>附加</code>。</li></ol><p><img src='./img/TIM24.png' alt='img' /></p><p>  <br/></p><ol start='5' ><li>在弹出的窗口中点击<code>添加</code>。</li></ol><p><img src='./img/TIM25.png' alt='img' /></p><p>  <br/></p><ol start='6' ><li>然后找到你数据库文件存放的位置，选择你要附加的mdf文件，点击<code>确定</code>。</li></ol><p><img src='./img/TIM26.png' alt='img' /></p><p>  <br/></p><ol start='7' ><li>此时你将看到你要附加的数据库列表，点击<code>确定</code>。</li></ol><p><img src='./img/TIM27.png' alt='img' /></p><p>  <br/></p><ol start='8' ><li>附加成功后，你可以在<code>对象资源管理器</code>里看到这个数据库。</li></ol><p><img src='./img/TIM28.png' alt='img' /></p><p>  <br/></p></li></ul><h3><a name='header-n382' class='md-header-anchor '></a>SQLServer 相关教程</h3><ul><li><p>网园培训教程</p><ul><li><a href='http://tutorial.yowfung.cn/03/' target="blank">SQL Server 2014下载和安装教程</a></li><li><a href='http://tutorial.yowfung.cn/05/' target="blank">SQL常用查询语句</a></li><li><a href='http://tutorial.yowfung.cn/06/' target="blank">ASP.NET(C#)操作SQL Server数据库</a></li></ul></li><li><p>其他参考教程</p><ul><li><p><a href='http://www.imooc.com/learn/435' target="blank">“慕课网”上的《SQL Server基础》教程</a></p></li><li><p><a href='http://www.w3school.com.cn/sql/index.asp' target="blank">“W3school“上的SQL教程</a></p></li><li><p><a href='http://www.runoob.com/sql/sql-tutorial.html' target="blank">”菜鸟教程“上的SQL教程</a></p><p></p></li></ul></li></ul><p></p><p></p></div>
+</body>
+</html>

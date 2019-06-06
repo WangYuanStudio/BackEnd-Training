@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>注册页面</title>
+	<link rel="stylesheet" href="./css/normal.css" />
+	<link rel="stylesheet" href="./css/sign.css" />
+</head>
+<body>
+	<div class="containerContainer">
+		<div class="container">
+			<div class="topImage">
+				<img src="./image/sign.png" />
+			</div>
+			<h3>注册页面</h3>
+			<form>
+				<ul>
+					<li class="shuru">
+						<input type="text" id="sign_name" placeholder="用户名" required />
+					</li>
+					<li class="shuru">
+						<input type="password" id="sign_password" placeholder="密码" required />	
+					</li>
+					<li class="shuru">
+						<input type="password" id="sign_veridate" placeholder="确认密码" required />	
+					</li>
+					<li class="sex">
+						<span>性别</span>
+						<div class="choiceContainer">
+							<input type="radio"  name="sex" value="girl" class="ichocie" checked/><div class="choice c"></div>女生
+						</div>
+						<div class="choiceContainer">
+							<input type="radio"  name="sex" value="boy" class="ichocie" /><div class="choice"></div>男生
+						</div>
+					</li>
+					<li class="like">
+						<span>爱好</span>
+						<div class="choiceContainer">
+							<input type="checkbox" id="sign_like_book" name="like" value="book" class="cchocie" /><div class="lchoice"></div>
+							<span>书籍</span>
+						</div>
+						<div class="choiceContainer">
+							<input type="checkbox" id="sign_like_sport" name="like" value="sport" class="cchocie" /><div class="lchoice"></div>
+							<span>运动</span>
+						</div>
+						<div class="choiceContainer">
+							<input type="checkbox" id="sign_like_game" name="like" value="game" class="cchocie" /><div class="lchoice"></div>
+							<span>游戏</span>
+						</div>
+					</li>
+					<li class="select">
+						年级
+						<select id="sign_grade" name="grade">
+							<option value="2017" selected>2017</option>
+							<option value="2016">2016</option>
+						</select>
+						年龄
+						<select id="sign_age" name="age">
+							<option value="23">23</option>
+							<option value="22">22</option>
+							<option value="21">21</option>
+							<option value="20">20</option>
+							<option value="19" selected>19</option>
+							<option value="18">18</option>
+							<option value="17">17</option>
+							<option value="16">16</option>
+						</select>
+					</li>
+					<li>
+						<input id="sign_submit" type="submit" value="点击注册" class="loginButtom">
+					</li>
+					<li class="haveID">
+						已有账号？现在去<a href="./login.html">登录→</a>
+					</li>
+					<li class="copyright">-- © 2017 网园编程 --</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+	<script src="./js/zepto.min.js"></script>
+	<script src="./js/sign.js"></script>
+</body>
+</html>

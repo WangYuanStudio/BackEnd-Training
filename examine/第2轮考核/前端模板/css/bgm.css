@@ -1,0 +1,166 @@
+*{
+	font-family: "MSYaHei";
+}
+
+.container{
+	width: calc(100% - 200px);
+	min-width:800px;
+	margin-bottom: 20px;
+	padding: 16px 0 16px 0;
+}
+
+
+.sonImg{
+	text-align: left;
+	margin-left: 32px;
+	padding-left: 32px;
+	height: 32px;
+	line-height: 32px;
+	background: url(../image/notice.png);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-bottom: 16px;
+}
+
+.sonImg .title{
+	font-size: 18px;
+	font-weight: bold;
+}
+form{
+	text-align: left;
+}
+form p{
+	margin-bottom: 16px;
+}
+form .title{
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 32px;
+}
+form input[type="text"]{
+	font-size: 14px;
+	color: #1296db;
+	outline: 0px;
+	width: calc(100% - 450px);
+	background-color: rgba(255,255,255,0.7);
+	padding-left: 16px;
+	height: 24px;
+	line-height: 18px;
+}
+form textarea{
+	font-size: 14px;
+	line-height: 18px;
+	width: calc(100% - 450px);
+	height: 120px;
+	background-color: rgba(255,255,255,0.7);
+	resize:none;
+	margin-left: 4px;
+}
+.noticeContent .title{
+	float: left;
+}
+textarea[name="noticeContent"]{
+	float: left;
+	/*font-size: 18px;*/
+	outline: 0px;
+	color: #1296db;
+	padding: 8px;
+}
+input[type="submit"]{
+	float: right;
+	margin-right: 50px;
+	font-size: 18px;
+	background: url(../image/send.png);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 32px;
+	cursor: pointer;
+	outline: 0px;
+}
+.Management{
+	background-image: url(../image/noticeM.png);
+}
+.ManagementUsr{
+	background-image: url(../image/Muser.png);
+}
+textarea:focus{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+input:focus{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.container ul{
+	list-style: none;
+}
+.container ul li{
+	margin-bottom: 16px;
+}
+.container ul .Mtitle{
+	font-weight: bold;
+	margin-bottom: 24px;
+}
+.container ul li .MF{
+	width: calc(25% - 32px);
+	padding: 0 16px;
+	text-align: center;
+	float: left;
+}
+.container ul li .method{
+	width: calc(10% - 32px);
+}
+.container ul li .noticeContent{
+	width: calc(35% - 32px);
+}
+.delate{
+	cursor: pointer;
+	width: 30px;
+	height: 32px;
+	line-height: 32px;
+	font-weight: bold;
+}
+.delate:hover{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.delate input {
+	border: none;
+	background: rgba(0,0,0,0);
+	width: calc(100% + 32px);
+	margin-left: -16px;
+	height: 32px;
+	cursor: pointer;
+	outline: none;
+}
+
+.page{
+	float: right;
+	margin-right: 32px;
+}
+
+.page .infoPage{
+	float: left;
+	margin-right: 32px;
+	margin-top: 8px;
+}
+
+.page .infoPage label{
+	font-size: 14px;
+	color: #666;
+}
+
+.page .sonPage{
+	float: left;
+	padding: 8px 16px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.page .sonPage:hover{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.page a{
+	text-decoration: none;
+	color: blue;
+}

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>CMS新闻发布平台</title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/user.css"/>
+    <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+</head>
+<body>
+    <form method="post" action="#" id="form1">
+        <!-- 标题栏 -->
+        <div id="banner">
+            <div id="banMid">
+                <h1>&nbsp;CMS新闻发布平台</h1>
+                <span>脱离了设计的网页将就啦！</span>
+            </div>
+        </div>
+
+        <!-- 导航栏 -->
+        <div id="mainNav">
+            <ul id="navMid">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html">分类</a></li>
+                <li><a href="share.html">发布</a></li>
+                <li><a href="idea.html">想法</a></li>
+                <li><a href="user.html" class="checked">我</a></li>
+            </ul>
+        </div>
+
+        <!-- 内容栏 -->
+        <div id="container">
+
+            <!-- 主体 -->
+            <div id="main">
+                <!-- 左边栏 -->
+                <div id="mainLeft">
+                    <!-- 搜索栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">搜索</span>
+                        <div class="clear"></div>
+                        <input id="searchInput" name="content" placeholder="关键字：标题/发布人" />
+                        <input id="submitBtn" type="submit" class="pointer" value="搜索" />
+                    </div>
+
+                    <!-- 分类栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">分类</span>
+                        <div class="clear"></div>
+                        <ul>
+                            <li><a href="list.html?categoryId=1">所有分类</a></li>
+                            <li><a href="list.html?categoryId=2">Web前端</a></li>
+                            <li><a href="list.html?categoryId=3">Web后端</a></li>
+                            <li><a href="list.html?categoryId=4">服务器运维</a></li>
+                            <li><a href="list.html?categoryId=5">微信公众平台</a></li>
+                            <li><a href="list.html?categoryId=6">嵌入式Linux</a></li>
+                            <li><a href="list.html?categoryId=7">极客空间</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 推荐栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">推荐</span>
+                        <div class="clear"></div>
+                        <ul>
+                            <li><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">清华大学开源镜像站</a></li>
+                            <li><a href="https://www.ithome.com/" target="_blank">iT之家</a></li>
+                            <li><a href="http://www.csdn.net/" target="_blank">CSDN</a></li>
+                            <li><a href="http://forum.ubuntu.org.cn/" target="_blank">Ubuntu社区</a></li>
+                            <li><a href="https://www.imooc.com/" target="_blank">程序员的梦工厂</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右边栏 -->
+                <div id="mainRight">
+                    <div id="show">
+                        <span class="blockTitle2" id="position">位置 &gt;&gt;
+                            <b><a href="user.html?">我的资料</a></b>
+                        </span>
+                        <div class="clear"></div>
+                        <div class="mainbox">
+
+                            <!-- 登录 -->
+                            <div class="user_login" style="display: none;">
+                                <h2>用户登录</h2>
+                                <span>用户名:</span>
+                                <input type="text" maxlength="10"><br>
+                                <span>密码:</span>
+                                <input type="password" maxlength="16"><br>
+                                <input type="checkbox" id="remember">
+                                <label for="remember">记住我</label><br>
+                                <br>
+                                <label class="tips">没有账号?去<a href="javascript:register()">注册</a>!</label>
+                                <input type="submit" value="登录">
+                            </div>
+
+
+                            <!-- 注册 -->
+                            <div class="user_register" style="display: none;">
+                                <h2>用户注册</h2>
+                                <span>用户名:</span>
+                                <input type="text" maxlength="10"><br>
+                                <span>密码:</span>
+                                <input type="password" maxlength="16"><br>
+                                <span>确认密码:</span>
+                                <input type="password" maxlength="16"><br>
+                                <!-- 邮箱应做格式检查 -->
+                                <span>邮箱</span>
+                                <input type="text" maxlength="100"><br>
+                                <!-- 手机也需要做规则检查 -->
+                                <span>手机号:</span>
+                                <input type="text" maxlength="11"><br>
+                                <span>性别:</span>
+                                <input type="radio" name="sex" id="male">
+                                <label for="male">男</label>
+                                <input type="radio" name="sex" id="female">
+                                <label for="female">女</label>
+                                <br>
+                                <!-- 这里的生日需要实现真正的日期选择功能,例如选择3月时会有31天,选择4月时会有30天,要考虑闰年 -->
+                                <span>生日:</span>
+                                <select id="year">
+                                    <option>1995</option>
+                                    <option>1996</option>
+                                    <option>1997</option>
+                                    <option>1998</option>
+                                    <option selected="true">1999</option>
+                                    <option>2000</option>
+                                    <option>2001</option>
+                                </select>
+                                <label for="year">年</label>
+                                <select id="month">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option selected="true">5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                </select>
+                                <label for="month">月</label>
+                                <select id="day">
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option selected="true">15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                </select>
+                                <label for="day">日</label>
+                                <br>
+                                <input type="checkbox" id="agreement">
+                                <label for="agreement">同意<a href="#">注册条款</a></label><br>
+                                <br>
+                                <label class="tips">已有账号?去<a href="javascript:login()">登录</a>!</label>
+                                <input type="submit" value="立即注册">
+                            </div>
+
+
+                            <!-- 修改资料 -->
+                            <div class="user_changeInfo" style="display: none;">
+                                <h2>修改资料</h2>
+                                <span>用户名:</span>
+                                <label>YowFung</label><br>
+                                <!-- 邮箱应做格式检查 -->
+                                <span>邮箱</span>
+                                <input type="text" maxlength="100" value="yowfung@outlook.com"><br>
+                                <!-- 手机也需要做规则检查 -->
+                                <span>手机号:</span>
+                                <input type="text" maxlength="11" value="13800138000"><br>
+                                <span>性别:</span>
+                                <input type="radio" name="sex" id="male" checked="true">
+                                <label for="male">男</label>
+                                <input type="radio" name="sex" id="female">
+                                <label for="female">女</label>
+                                <br>
+                                <!-- 这里的生日需要实现真正的日期选择功能,例如选择3月时会有31天,选择4月时会有30天,要考虑闰年 -->
+                                <span>生日:</span>
+                                <select id="year">
+                                    <option>1995</option>
+                                    <option>1996</option>
+                                    <option>1997</option>
+                                    <option>1998</option>
+                                    <option selected="true">1999</option>
+                                    <option>2000</option>
+                                    <option>2001</option>
+                                </select>
+                                <label for="year">年</label>
+                                <select id="month">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option selected="true">5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                </select>
+                                <label for="month">月</label>
+                                <select id="day">
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option selected="true">15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                </select>
+                                <label for="day">日</label>
+                                <br>
+                                <input type="submit" value="保存修改">
+                            </div>
+
+                            <!-- 修改密码 -->
+                            <div class="user_changePassword" style="display: none;">
+                                <h2>修改密码</h2>
+                                <span>旧密码:</span>
+                                <input type="password" maxlength="16"><br>
+                                <span>新密码:</span>
+                                <input type="password" maxlength="16"><br>
+                                <span>确认密码:</span>
+                                <input type="password" maxlength="16"><br>
+                                <input type="submit" value="确认修改">
+                            </div>
+
+
+                            <!-- 显示信息 -->
+                            <div class="user_showInfo" style="display: block;">       
+                                <h2>YowFung</h2>
+                                <span>手机号:</span>
+                                <label>13800138000</label><br>
+                                <span>邮箱:</span>
+                                <label>yowfung@outlook.com</label><br>
+                                <span>性别:</span>
+                                <label>男</label><br>
+                                <span>生日:</span>
+                                <label>2018-12-31</label>
+                                <!-- 只有查看自己的资料时才显示下面这些按钮,查看别人的资料时则不显示 -->
+                                <div class="show_control">
+                                    <a href="javascript:login()">退出登录</a>
+                                    <a href="javascript:changeInfo()"">修改资料</a>
+                                    <a href="javascript:changePassword()"">修改密码</a>
+                                    <a href="share.html">发布新闻</a>
+                                    <a href="javascript:viewNews()">我的新闻</a>
+                                </div>
+                            </div>
+                                
+                            <!-- 查看发布的新闻 -->
+                            <div class="user_showNews" style="display: none;">
+                                <h2>我发布的新闻</h2>
+                                <ul>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                    <li>
+                                        <a class="title" href="article.html?newsId=1">一名优秀程序猿都要有哪些潜质？</a>
+                                        <span>2017-12-30 18:16</span>
+                                        <a class="del" href="javascript:confirm('确定要删除吗?')">删除</a>
+                                        <a class="edit" href="share.html?newsId=1">编辑</a>
+                                    </li>
+                                </ul>
+
+                                <!-- 分页栏 -->
+                                <div id="turn">
+                                    <a class="back" href="javascript:viewInfo()">返回</a>
+                                    <a href="javascript:#">&lt;</a>
+                                    <a href="javascript:#">1</a>
+                                    <a href="user.html?userId=1&showNewsPage=2">2</a>
+                                    <a href="user.html?userId=1&showNewsPage=3">3</a>
+                                    <a href="user.html?userId=1&showNewsPage=4">4</a>
+                                    <a href="user.html?userId=1&showNewsPage=5">5</a>
+                                    <a href="user.html?userId=1&showNewsPage=6">6</a>
+                                    <a href="user.html?userId=1&showNewsPage=7">7</a>
+                                    <a href="user.html?userId=1&showNewsPage=8">8</a>
+                                    <a href="user.html?userId=1&showNewsPage=9">9</a>
+                                    <a href="user.html?userId=1&showNewsPage=2">&gt;</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 页脚栏 -->
+        <div id="footer">
+            <div id="footerMid">
+                <div>
+                    <h2>友情链接</h2>
+                    <span>
+                        <a href="http://www.laijingwu.com" target="_blank">laijingwu</a>
+                        <a href="http://www.huizhe.xyz" target="_blank">Huizhe</a>
+                        <a href="https://yuanmoc.com/" target="_blank">yuanmoc</a>
+                        <a href="http://www.henxu1225.com/" target="_blank">HenryXu</a>
+                        <a href="http://www.yowfung.cn/" target="_blank">YowFung</a>
+                    </span>
+                    <span>&copy; Copyright WangYuanInfoStudio 2017-2018</span>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,3 @@
+.container ul li .noticeContent{
+	width: calc(45% - 32px);
+}

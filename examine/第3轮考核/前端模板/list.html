@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>CMS新闻发布平台</title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/list.css"/>
+</head>
+
+<body>
+    <form method="post" action="#" id="form1">
+        <!-- 标题栏 -->
+        <div id="banner">
+            <div id="banMid">
+                <h1>&nbsp;CMS新闻发布平台</h1>
+                <span>脱离了设计的网页将就啦！</span>
+            </div>
+        </div>
+
+        <!-- 导航栏 -->
+        <div id="mainNav">
+            <ul id="navMid">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="list.html" class="checked">分类</a></li>
+                <li><a href="share.html">发布</a></li>
+                <li><a href="idea.html">想法</a></li>
+                <li><a href="user.html">我</a></li>
+            </ul>
+        </div>
+
+        <!-- 内容栏 -->
+        <div id="container">
+
+            <!-- 主体 -->
+            <div id="main">
+                <!-- 左边栏 -->
+                <div id="mainLeft">
+                    <!-- 搜索栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">搜索</span>
+                        <div class="clear"></div>
+                        <input id="searchInput" name="content" placeholder="关键字：标题/发布人" />
+                        <input id="submitBtn" type="submit" class="pointer" value="搜索" />
+                    </div>
+
+                    <!-- 分类栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">分类</span>
+                        <div class="clear"></div>
+                        <ul>
+                            <li><a href="list.html?categoryId=1">所有分类</a></li>
+                            <li><a href="list.html?categoryId=2">Web前端</a></li>
+                            <li><a href="list.html?categoryId=3">Web后端</a></li>
+                            <li><a href="list.html?categoryId=4">服务器运维</a></li>
+                            <li><a href="list.html?categoryId=5">微信公众平台</a></li>
+                            <li><a href="list.html?categoryId=6">嵌入式Linux</a></li>
+                            <li><a href="list.html?categoryId=7">极客空间</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 推荐栏 -->
+                    <div class="class_left">
+                        <span class="blockTitle">推荐</span>
+                        <div class="clear"></div>
+                        <ul>
+                            <li><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">清华大学开源镜像站</a></li>
+                            <li><a href="https://www.ithome.com/" target="_blank">iT之家</a></li>
+                            <li><a href="http://www.csdn.net/" target="_blank">CSDN</a></li>
+                            <li><a href="http://forum.ubuntu.org.cn/" target="_blank">Ubuntu社区</a></li>
+                            <li><a href="https://www.imooc.com/" target="_blank">程序员的梦工厂</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右边栏 -->
+                <div id="mainRight">
+                    <div id="show">
+                        <span class="blockTitle2" id="position">位置 &gt;&gt;
+                            <b><a href="list.html">分类新闻</a></b>
+                        </span>
+                        <div class="clear"></div>
+
+                        <div class="mainbox">
+                            <!-- 新闻列表栏 -->
+                            <div class="list_ul">
+                                <!-- 搜索结果显示 -->
+                                <div id="SearchResult" style="display: none;">
+                                    <p>没有相关搜索内容!/搜索到10条相关结果</p>
+                                </div>
+
+                                <ul>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- 新闻项目 -->
+                                    <li>
+                                        <div class="list_div">
+                                            <a href='article.html?newsId=5' title='一名优秀程序猿都要有哪些潜质？'>
+                                                <h3>一名优秀程序猿都要有哪些潜质？</h3>
+                                            </a>
+                                            <div class="list_info">
+                                                <span>发布时间：1小时前</span>
+                                                <span>发布人：<a href='user.html?userId=2'>yowfung</a></span>
+                                                <span>阅读量：20</span>
+                                                <span>评论数：11</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <!-- 分页栏 -->
+                            <div id="turn">
+                                <a href='javascript:#'>&lt;</a>
+                                <a href='javascript:#'>1</a>
+                                <a href='list.html?categoryId=1&page=2#position'>2</a>
+                                <a href='list.html?categoryId=1&page=3#position'>3</a>
+                                <a href='list.html?categoryId=1&page=4#position'>4</a>
+                                <a href='list.html?categoryId=1&page=5#position'>5</a>
+                                <a href='list.html?categoryId=1&page=6#position'>6</a>
+                                <a href='list.html?categoryId=1&page=7#position'>7</a>
+                                <a href='list.html?categoryId=1&page=8#position'>8</a>
+                                <a href='list.html?categoryId=1&page=9#position'>9</a>
+                                <a href='list.html?categoryId=1&page=2'>&gt;</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 页脚栏 -->
+        <div id="footer">
+            <div id="footerMid">
+                <div>
+                    <h2>友情链接</h2>
+                    <span>
+                        <a href="http://www.laijingwu.com" target="_blank">laijingwu</a>
+                        <a href="http://www.huizhe.xyz" target="_blank">Huizhe</a>
+                        <a href="https://yuanmoc.com/" target="_blank">yuanmoc</a>
+                        <a href="http://www.henxu1225.com/" target="_blank">HenryXu</a>
+                        <a href="http://www.yowfung.cn/" target="_blank">YowFung</a>
+                    </span>
+                    <span>&copy; Copyright WangYuanInfoStudio 2017-2018</span>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
